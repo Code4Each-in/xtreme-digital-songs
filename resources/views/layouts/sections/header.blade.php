@@ -18,8 +18,8 @@
           <!--end::Heaeder menu toggle-->
           <!--begin::Header Logo-->
           <div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
-              <a href="../../demo2/dist/index.html">
-                  <img alt="Logo" src="assets/media/logos/logo-demo2.png" class="logo-default h-25px" />
+              <a href="{{ route('dashboard')}}">
+                  <img alt="Logo" src="{{ asset('assets/media/XtremeDigitalPrimaryLogo/XTREME DIGITAL - colour.png')}}" class="logo-default h-100px" />
                   <img alt="Logo" src="assets/media/logos/logo-demo2-sticky.png" class="logo-sticky h-25px" />
               </a>
           </div>
@@ -33,13 +33,13 @@
                       <!--begin::Menu-->
                       <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
                           <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
-                              <a class="menu-link active py-3" href="../../demo2/dist/index.html">
+                              <a class="menu-link active py-3" href="{{ route('dashboard')}}">
                                   <span class="menu-title">Dashboard</span>
                                   <span class="menu-arrow d-lg-none"></span>
                               </a>
                               <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
                                   <div class="menu-item">
-                                      <a class="menu-link active py-3" href="../../demo2/dist/index.html">
+                                      <a class="menu-link active py-3" href="{{ route('dashboard')}}">
                                           <span class="menu-icon">
                                               <!--begin::Svg Icon | path: icons/duotune/art/art002.svg-->
                                               <span class="svg-icon svg-icon-2">
@@ -50,9 +50,10 @@
                                               </span>
                                               <!--end::Svg Icon-->
                                           </span>
-                                          <span class="menu-title">Default</span>
+                                          <span class="menu-title">Dashboard</span>
                                       </a>
                                   </div>
+                                  {{--
                                   <div class="menu-item">
                                       <a class="menu-link py-3" href="../../demo2/dist/dashboards/aside.html">
                                           <span class="menu-icon">
@@ -84,6 +85,7 @@
                                           <span class="menu-title">Landing</span>
                                       </a>
                                   </div>
+                                  --}}
                               </div>
                           </div>
                           <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
