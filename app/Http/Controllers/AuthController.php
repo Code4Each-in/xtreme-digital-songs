@@ -10,16 +10,20 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('login.index');
+        $userId = request()->user()->id ?? null;
+        if ($userId) {
+            return redirect()->route('dashboard');
+        } else {
+            return view('login.index');
+        }
     }
 
     public function login(Request $request)
 	{
-        // dd($request);
         if ($request->isMethod('get')) {
             $userId = request()->user()->id ?? null;
             if ($userId) {
-                return redirect()->route('dashboard.index');
+                return redirect()->route('dashboard');
             } else {
                 return view('login.index');
             }

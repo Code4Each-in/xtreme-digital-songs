@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,22 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard.index');
-// });
-
-Route::get('/users', function () {
-    return view('users.index');
-});
-
-// Route::get('/login', function () {
-//     return view('login.index');
-// });
-
-// Route::get('/master', function () {
-//     return view('master');
-// });
-
 Route::match(['get', 'post'], '/', [AuthController::class, 'index']);
 Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name('login');
 
+//Authenticated Group Routes Starts
+Route::group(['middleware' => ['auth']], function() {
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
+Route::get('/users', function () {
+    return view('users.index');
+});
+Route::get('logout', [AuthController::class, 'logOut'])->name('logout');
+});
+//Authenticated Group Routes Ends
