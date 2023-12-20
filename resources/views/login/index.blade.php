@@ -18,7 +18,7 @@
 					<!--begin::Wrapper-->
 					<div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
 						<!--begin::Form-->
-						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="{{ route('login') }}">
+						<form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="{{ route('login') }}" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 							<!--begin::Heading-->
 							<div class="text-center mb-10">
