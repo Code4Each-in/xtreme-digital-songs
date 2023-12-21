@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')
 Route::get('/users', function () {
     return view('users.index');
 });
+Route::post('/company/add/',[CompaniesController::class,'store']);
 Route::get('logout', [AuthController::class, 'logOut'])->name('logout');
 });
 //Authenticated Group Routes Ends
