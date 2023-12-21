@@ -26,7 +26,7 @@ Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name(
 //Authenticated Group Routes Starts
 Route::group(['middleware' => ['auth']], function() {
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-Route::get('/users', function () {
+Route::get('/companies', function () {
     return view('users.index');
 });
 Route::post('/company/add/',[CompaniesController::class,'store']);

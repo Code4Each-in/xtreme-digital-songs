@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
-@section('title', 'Users')
-
+@section('title', 'Companies')
 @section('content')
             <!--begin::Toolbar-->
             <div class="toolbar py-5 py-lg-15" id="kt_toolbar">
@@ -617,9 +615,9 @@
                                             </div>
                                         </th>
                                         <th class="min-w-125px">User</th>
-                                        <th class="min-w-125px">Role</th>
-                                        <th class="min-w-125px">Last login</th>
-                                        <th class="min-w-125px">Two-step</th>
+                                        <th class="min-w-125px">Email</th>
+                                        <th class="min-w-125px">Phone</th>
+                                        <th class="min-w-125px">Company Name</th>
                                         <th class="min-w-125px">Joined Date</th>
                                         <th class="text-end min-w-100px">Actions</th>
                                     </tr>
@@ -628,6 +626,7 @@
                                 <!--end::Table head-->
                                 <!--begin::Table body-->
                                 <tbody class="text-gray-600 fw-bold">
+                                {{--
                                     <!--begin::Table row-->
                                     <tr>
                                         <!--begin::Checkbox-->
@@ -2098,6 +2097,7 @@
                                         <!--end::Action=-->
                                     </tr>
                                     <!--end::Table row-->
+                                    --}}
                                 </tbody>
                                 <!--end::Table body-->
                             </table>

@@ -27,7 +27,7 @@ class CompaniesController extends Controller
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-
+        $userId = $user->id;
         //Create Company On User Created
         if ($user) {
             $company = Company::create([
@@ -40,8 +40,8 @@ class CompaniesController extends Controller
             ]);
 
             if ($company) {
-                $user->update(['company_id' => $company->id]);
-                return response()->json(['message' => 'Company created successfully']);
+                User::where('id',$userId)->update(['company_id' => $company->id]);
+                return response()->json(['success' => true, 'message' => 'Company created successfully']);
             } else {
                 // Handle the case where Company creation fails
                 $user->delete(); // Rollback the user creation
