@@ -11,7 +11,7 @@
 				<!--begin::Content-->
 				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
 					<!--begin::Logo-->
-					<a href="../../demo2/dist/index.html" class="mb-12">
+					<a href="{{ url('/')}}" class="mb-12">
 						<img alt="Logo" src="{{asset('assets/media/xtremeOtherLogo/XTREME DIGITAL FOR MUSIC.png')}}" class="h-100px" />
 					</a>
 					<!--end::Logo-->

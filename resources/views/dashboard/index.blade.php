@@ -123,9 +123,11 @@
                                 <!--end::Menu-->
                             </div>
                             <!--end::Wrapper-->
+                            {{--
                             <!--begin::Button-->
                             <a href="#" class="btn btn-bg-white btn-active-color-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Create</a>
                             <!--end::Button-->
+                            --}}
                         </div>
                         <!--end::Actions-->
                     </div>
@@ -136,6 +138,7 @@
                 <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
                     <!--begin::Post-->
                     <div class="content flex-row-fluid" id="kt_content">
+                        {{--
                         <!--begin::Row-->
                         <div class="row g-5 g-xxl-8">
                             <!--begin::Col-->
@@ -471,6 +474,7 @@
                             <!--end::Col-->
                         </div>
                         <!--end::Row-->
+                        --}}
                         <!--begin::Row-->
                         <div class="row gy-5 g-xl-8">
                             <!--begin::Col-->
@@ -946,6 +950,7 @@
                             <!--end::Col-->
                         </div>
                         <!--end::Row-->
+                        {{--
                         <!--begin::Row-->
                         <div class="row gy-5 g-xl-8">
                             <!--begin::Col-->
@@ -2173,6 +2178,7 @@
                             <!--end::Col-->
                         </div>
                         <!--end::Row-->
+                        --}}
                     </div>
                     <!--end::Post-->
                 </div>
