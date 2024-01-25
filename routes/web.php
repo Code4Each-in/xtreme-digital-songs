@@ -26,10 +26,9 @@ Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name(
 //Authenticated Group Routes Starts
 Route::group(['middleware' => ['auth']], function() {
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-Route::get('/companies', function () {
-    return view('users.index');
-});
-Route::post('/company/add/',[CompaniesController::class,'store']);
+Route::get('/companies', [CompaniesController::class,'index']);
+Route::post('/companies/add/',[CompaniesController::class,'store']);
+Route::delete('/companies/delete/{company}',[CompaniesController::class,'destroy'])->name('companies.destroy');
 Route::get('logout', [AuthController::class, 'logOut'])->name('logout');
 });
 //Authenticated Group Routes Ends
